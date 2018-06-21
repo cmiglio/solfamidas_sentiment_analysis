@@ -300,13 +300,12 @@ def preprocess_data(data,data_raw,extra_features,add_stemmer,is_submission):
                     if long==1:
                         data.set_value(indice_fila,'compania','otras',takeable=False)
 
-    # No borro el contenido, creo dummy concurso
-    #if is_submission==False:
-        data['HolaX']=data['hashtags'].apply(lambda x: int(bool(re.match(r'.*(Hola[A-Z]{1})[a-z]+.*',x))))
-        data['concurso']=data['whole_tweet'].apply(lambda h: 'destino' in h and 'click' in h)
-        data['concurso_tot']=data['concurso']+data['HolaX']
-        data['concurso_tot']=data['concurso_tot'].replace(2,1)
+    # Cambiar tu destino a un solo click
     
+        if is_submission==False:
+            d=data['hashtags'].apply(lambda x: bool(re.match(r'.*(Hola[A-Z]{1})[a-z]+.*',x)))
+            data.airline_sentiment[d==True]='neutral'
+            
         data['is_reply']=data_raw.is_reply.astype(int)
 
         
@@ -395,7 +394,7 @@ def obtain_data_representation(df, test,max_df,binary,max_features,
 #        
         
         features = ['exclamations_si','questions_si','suspensivos_si',
-                    'mentions_si','concurso_tot','n_posit_emo',
+                    'mentions_si','n_posit_emo',
                     'iberia','vueling','ryanair','otras_cias',
                     'n_words10','n_words20','LatinAM_bool',
                     'is_reply','lun_mar','finde','noche','time_negat',
