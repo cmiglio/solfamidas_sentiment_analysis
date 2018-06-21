@@ -383,18 +383,9 @@ def obtain_data_representation(df, test,max_df,binary,max_features,
     
     # Extracción de features 'extra'
     if extra_features:
-#        features = ['n_words', 'n_words_mayus','n_words_mayus_len', 'len_tw','n_suspensivos',
-#                    'n_exclamations','n_questions','n_emo','n_mentions','n_hashtags','n_airline',
-#                    'dinterval_0','dinterval_1','dinterval_2','dinterval_3',
-#                    'hinterval_0','hinterval_1','hinterval_2','hinterval_3',
-#                    'hinterval_4','hinterval_5','hinterval_6','hinterval_7',
-#                    'Mon','Tue','Wed','Thu','Fri','Sat','Sun',
-#                    'iberia','vueling','ryanair','otras_cias', 'LatinAM_bool',
-#                    'is_reply',]        
-#        
         
         features = ['exclamations_si','questions_si','suspensivos_si',
-                    'mentions_si','n_posit_emo',
+                    'mentions_si',A'n_posit_emo',
                     'iberia','vueling','ryanair','otras_cias',
                     'n_words10','n_words20','LatinAM_bool',
                     'is_reply','lun_mar','finde','noche','time_negat',
