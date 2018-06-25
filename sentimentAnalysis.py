@@ -385,7 +385,7 @@ def obtain_data_representation(df, test,max_df,binary,max_features,
     if extra_features:
         
         features = ['exclamations_si','questions_si','suspensivos_si',
-                    'mentions_si',A'n_posit_emo',
+                    'mentions_si','n_posit_emo',
                     'iberia','vueling','ryanair','otras_cias',
                     'n_words10','n_words20','LatinAM_bool',
                     'is_reply','lun_mar','finde','noche','time_negat',
