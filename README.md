@@ -1,5 +1,6 @@
 # Analisis de sentimientos de Aerolineas en castellano
 Solfamidas: E. Fascio, D. Leiva, C. Migliorelli, M. Rodriguez
+Nuestro blog: https://elisafascio.wixsite.com/solfamidas
 
 # Contenido:
 
@@ -14,6 +15,5 @@ Solfamidas: E. Fascio, D. Leiva, C. Migliorelli, M. Rodriguez
 * __tweets_processed.csv__: Tweets despues del scrapping para generar el modelo
 * __tweets_submission_processed.csv__: Tweets despues del scrapping para hacer la prediccion
 
-# Nuestro blog:
 
-https://elisafascio.wixsite.com/solfamidas
+
